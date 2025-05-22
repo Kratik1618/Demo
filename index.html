@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="main">
+
+    <div class="meeting_logo">
+
+      <div id="meet_room">
+        <div class="meeting_label ">View Demo</div>
+      </div>
+
+    </div>
+
+    <div id="videoOverlay"
+      style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.9);z-index:9999;justify-content:center;align-items:center;">
+      <video id="fullscreenVideo" style="width:100vw;height:100vh;object-fit:cover;">
+        <source src="videos/vid_001.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div id="imageOverlay"
+      style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.95);z-index:10000;justify-content:center;align-items:center;">
+      <button id="goBackBtn" class="go-back-btn">&#8592; Home</button>
+      <img id="fullscreenImage" src="images/off_001.png" style="width:100vw;height:100vh;object-fit:cover;"
+        alt="Completed">
+      <img src="images/off_002.png" alt="wire only"
+        style="width:100vw;height:100vh;object-fit:cover;position:absolute;top:0;left:0;">
+      <button id="playVideoBtn" aria-label=""></button>
+    </div>
+
+    <div class="viewer360-overlay" id="viewer360Overlay">
+      <img class="viewer360-image" id="viewer360Image" src="./360 Turn Table/Protection Box Turn Table_00000.png"
+        alt="360 View">
+      <input class="viewer360-slider" type="range" id="viewer360Slider" min="0" max="119" value="0">
+      <button class="viewer360-close-btn" id="close360Btn"><img src="icons/icons8-close-64.png" alt=""></button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
