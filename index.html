@@ -16,13 +16,21 @@
 <body>
 
   <div class="main">
-
+   <div class="background">
     <div class="meeting_logo">
 
-      <div id="meet_room">
-        <div class="meeting_label ">View Demo</div>
+      <div>
+        <div class="meeting_label" id="viewDemoBtn" >View Demo</div>
       </div>
 
+      <div class="rooms">
+    <div class="room_label" id="meet_room" style="bottom: 36%; right: 79%; position: absolute; display: flex;">Meeting Room</div>
+    <div class="room_label" style="bottom: 36%; right: 43%; position: absolute; display: flex;">WorkStation</div>
+    <div class="room_label" style="bottom: 36%; right: 4%; position: absolute; display: flex;">Break Lounge</div>
+</div>
+        
+   </div>
+    
     </div>
 
     <div id="videoOverlay"
@@ -36,22 +44,87 @@
     <div id="imageOverlay"
       style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.95);z-index:10000;justify-content:center;align-items:center;">
       <button id="goBackBtn" class="go-back-btn">&#8592; Home</button>
-      <img id="fullscreenImage" src="images/off_001.png" style="width:100vw;height:100vh;object-fit:cover;"
+      <img id="fullscreenImage" src="images/off_001.png" style="width:100vw;height:105vh;object-fit:cover;"
         alt="Completed">
       <img src="images/off_002.png" alt="wire only"
         style="width:100vw;height:100vh;object-fit:cover;position:absolute;top:0;left:0;">
-      <button id="playVideoBtn" aria-label=""></button>
+        
+        <div class="popup-btns">
+         
+        <!-- Example for one label/button pair, repeat for each product -->
+<div class="popup_lables" data-product="wireless" style="top: 2%; left: 27%;">Wireless Access Point</div>
+<button class="popup-btn" data-product="wireless" aria-label="" style="top: 4%;left: 26.5%;"></button>
+
+<div class="popup_lables" data-product="rollingtv" style="top: 45.5%; left: 22%;">Rolling TV Stand</div>
+<button class="popup-btn" data-product="rollingtv" aria-label="" style="top: 48%; left: 21%;"></button>
+
+          <div class="popup_lables"  data-product="Wallmonitor" style="top: 36%; left: 39%;">Wall monitor mount</div>
+           <button class="" id="#" data-product="Wallmonitor" aria-label="" style="top: 38%; left: 38%;"></button>
+
+           <div class="popup_lables" data-product="ProAV" style="top: 29%; left: 35%;">Pro AV solutions</div>
+           <div class="popup_lables" data-product="ProAV" style="top: 29%; left: 35%;">Pro AV solutions</div>
+           <button class="" id="#" aria-label="" style="top: 32%; left: 34%;"></button>
+
+            <div class="popup_lables" data-product="ChargingStation" style="top: 73%; left: 51.4%;">Charging Station</div>
+           <button class="" id="#" data-product="ChargingStation" aria-label="" style="top: 75%; left: 51%;"></button>
+
+          <div class="popup_lables playVideoBtn" style="top: 65.5%; left: 48.5%;">Protection Box</div>
+          <button class="playVideoBtn" aria-label="" style="top: 68%; left: 48%;"></button>
+
+
+             <div class="popup_lables" data-product="ChargingCable" style="top: 73%; left: 31.5%;">Charging Cable</div>
+           <button class="" id="#" data-product="ChargingCable" aria-label="" style="top: 76%; left: 44%;"></button>
+
+        </div>
     </div>
 
     <div class="viewer360-overlay" id="viewer360Overlay">
-      <img class="viewer360-image" id="viewer360Image" src="./360 Turn Table/Protection Box Turn Table_00000.png"
-        alt="360 View">
-      <input class="viewer360-slider" type="range" id="viewer360Slider" min="0" max="119" value="0">
-      <button class="viewer360-close-btn" id="close360Btn"><img src="icons/icons8-close-64.png" alt=""></button>
+      <button class="viewer360-close-btn" id="close360Btn">
+        <img src="icons/icons8-close-64.png" alt="Close">
+      </button>
+      <div class="viewer360-container">
+        <!-- Left section: Video/Image -->
+        <div class="viewer360-left">
+          <div class="viewer360-media">
+            <!-- Place video or image here as needed -->
+            <img class="viewer360-image" id="viewer360Image" src="./360 Turn Table/Protection Box Turn Table_00000.png" alt="360 View">
+            <input class="viewer360-slider" type="range" id="viewer360Slider" min="0" max="119" value="0">
+          </div>
+        </div>
+        <!-- Right section: Content -->
+        <div class="viewer360-right">
+          <div class="viewer360-content">
+            <!-- Add your content here -->
+            <h2>Protection Box</h2>
+            <p>
+             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima sit illo aperiam consectetur? Totam aperiam dignissimos aspernatur dicta commodi necessitatibus, fugit vel debitis quisquam eaque, reiciendis, eligendi ullam nam pariatur!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div class="productOverlay" id="productInfoOverlay">
+  <div class="product_popup" id="productInfoContent">
+    <button class="product_closebtn" id="closeProductInfo">&times;</button>
+    <div class="productInfo-col">
+      <div class="productInfo-col-left">
+        <h2 id="productTitle"></h2>
+        <p id="productDesc"></p>
+      </div>
+      <div class="productInfo-col-right">
+        <img id="productImage" src="" alt="Product Image" />
+      </div>
     </div>
   </div>
+</div>
 
+  <script>
+
+  </script>
 
 </body>
+
+
 
 </html>
